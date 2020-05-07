@@ -1,0 +1,17 @@
+{
+  "name": "@randkid/size",
+  "version": "0.1.0",
+  "description": "Korean size data",
+  "main": "index.js",
+  "files": ["*.js"],
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randkid/size.git"
+  },
+  "bugs": {
+    "url": "https://github.com/randkid/size/issues"
+  },
+  "homepage": "https://github.com/randkid/size#readme"
+}
