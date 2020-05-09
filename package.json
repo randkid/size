@@ -1,6 +1,6 @@
 {
   "name": "@randkid/size",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Korean size data",
   "main": "index.js",
   "files": ["*.js"],
