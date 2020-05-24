@@ -10,3 +10,8 @@ Source 데이터와의 차이
 - `BMI 평가`와 같이 문자열(저체, 표준, 과체 등)인 값 삭제
 - N/A 값 있는 레코드 삭제 (남자: 906/7532 = 12.02%, 여자: 216/6484 = 3.33%)
 - 나이 순으로 정렬
+## Use (Deno)
+```ts
+import {m, f} from "https://raw.githubusercontent.com/randkid/size/master/mod.ts";
+console.log(m.data.length, f.data.length); // 6626 6268
+```
