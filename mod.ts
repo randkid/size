@@ -10,11 +10,11 @@ import f from "./src/f_model.js"
 import m from "./src/m_model.js"
 
 export default new NumericalTuple({
-    inputMaterials: [birthdate, gender],
+    inputMaterials: [birthdate],
     ranges: [],
-    rand(seed, birthDateVal, genderVal) {
+    rand(seed, birthDateVal) {
         const date = new Date(birthDateVal)
-        const models = genderVal == "f" ? f : m
+        const models = f
         const pca = PCA.load(models[2013 - date.getFullYear()].model)
         const randomized = pca.getStandardDeviations().splice(0, 5)
             .map((σ: number, i: number) => 
