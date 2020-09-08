@@ -9,7 +9,7 @@ import { hash } from "https://raw.githubusercontent.com/gnlow/planter/master/mod
 import f from "./src/f_model.js"
 import m from "./src/m_model.js"
 
-const a = new NumericalTuple({
+export default new NumericalTuple({
     inputMaterials: [birthdate, gender],
     ranges: [],
     rand(seed, birthDateVal, genderVal) {
@@ -23,4 +23,3 @@ const a = new NumericalTuple({
         return Array.from(pca.invert([randomized]).data[0]) as number[]
     }
 })
-console.log(new Date(birthdate.rand(0)), a.rand(0))
