@@ -12,11 +12,10 @@ const a = new NumericalTuple({
     rand(seed, birthDateVal) {
         const date = new Date(birthDateVal)
         const pca = PCA.load(f[2013 - date.getFullYear()].model)
-        const randomized = pca.getStandardDeviations()
+        const randomized = pca.getStandardDeviations().splice(0, 5)
             .map((σ: number, i: number) => 
                 gaussian(0, σ**2).ppf(hash(seed, i))
             )
-        console.log(pca.getStandardDeviations(), randomized)
         return Array.from(pca.invert([randomized]).data[0]) as number[]
     }
 })

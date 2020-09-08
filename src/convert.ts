@@ -16,10 +16,7 @@ const groupByAge = (arr: number[][]) => {
     return groups
 }
 const getModel = (data: number[][]) => {
-    const pca = new PCA(data, {
-        method: "NIPALS",
-        nCompNIPALS: 5,
-    })
+    const pca = new PCA(data)
     return pca.toJSON()
 }
 const writeFile = async (fileName: string, data: number[][]) => {
